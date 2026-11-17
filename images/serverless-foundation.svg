@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 300" role="img" aria-labelledby="title desc">
+  <title id="title">Serverless notes API architecture</title>
+  <desc id="desc">User authenticates with Cognito, then calls API Gateway with a JWT; API invokes Lambda, which reads and writes DynamoDB. CloudWatch and X-Ray provide observability.</desc>
+  <rect width="950" height="300" rx="18" fill="#101b30"/>
+  <g fill="#192d49" stroke="#64c6ef" stroke-width="2">
+    <rect x="28" y="92" width="145" height="82" rx="12"/>
+    <rect x="222" y="17" width="158" height="62" rx="12"/>
+    <rect x="222" y="92" width="158" height="82" rx="12"/>
+    <rect x="429" y="92" width="145" height="82" rx="12"/>
+    <rect x="623" y="92" width="159" height="82" rx="12"/>
+    <rect x="818" y="92" width="110" height="82" rx="12"/>
+    <rect x="353" y="215" width="260" height="60" rx="12"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="17" fill="#fff" text-anchor="middle">
+    <text x="100" y="141">Client</text>
+    <text x="301" y="55">Cognito</text>
+    <text x="301" y="127">API Gateway</text><text x="301" y="151" font-size="13">REST + authorizer</text>
+    <text x="501" y="139">Lambda</text>
+    <text x="702" y="128">DynamoDB</text><text x="702" y="152" font-size="13">USER#sub / NOTE#id</text>
+    <text x="872" y="139">PITR</text>
+    <text x="483" y="251">CloudWatch + X-Ray</text>
+  </g>
+  <g stroke="#9ad968" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M173 125h48"/><path d="M380 132h48"/><path d="M574 132h48"/><path d="M782 132h34"/>
+    <path d="M100 91V48h120"/><path d="M301 79v12"/>
+    <path d="M500 175v38"/><path d="M702 175v70h-87"/>
+  </g>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4" fill="#9ad968"/></marker></defs>
+</svg>
